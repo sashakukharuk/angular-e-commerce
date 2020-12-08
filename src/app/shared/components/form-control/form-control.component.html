@@ -1,0 +1,16 @@
+<form [formGroup]="form" (change)="onChange()">
+  <label>
+    {{item.label}}
+    <input formControlName="item" [type]="item.type">
+  </label>
+  <span class="warning" *ngIf="form.get('item').invalid && form.get('item').touched">
+    <span *ngIf="form.get('item').errors['required']">{{validate.required}} {{item.name}}</span>
+    <span *ngIf="form.get('item').errors['minlength'] && form.get('item').errors['minlength']['requiredLength']">
+      {{validate.min}} {{form.get('item').errors['minlength']['requiredLength']}}
+    </span>
+    <span *ngIf="form.get('item').errors['maxlength'] && form.get('item').errors['maxlength']['requiredLength']">
+      {{validate.max}} {{form.get('item').errors['maxlength']['requiredLength']}}
+    </span>
+  </span>
+</form>
+

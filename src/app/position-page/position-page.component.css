@@ -1,0 +1,70 @@
+/*CARD*/
+.block {
+  display: inline-block;
+  padding: 20px 0;
+}
+.block .card {
+  display: inline-block;
+  width: 226px;
+  height: 442px;
+  margin: 20px 20px;
+  background-color: white;
+}
+.block .card:hover {
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
+  0 3px 1px -2px rgba(0,0,0,0.12),
+  0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+/*CARD-PHOTO*/
+.block .card .card-photo {
+  width: 100%;
+  height: 79%;
+}
+.block .card .card-photo img {
+  width: 100%;
+  height: 100%;
+}
+
+/*CARD-TITLE*/
+.block .card .card-title {
+  text-align: center;
+  width: 100%;
+  height: 7%;
+}
+.block .card .card-title h4 {
+  text-transform: uppercase;
+  padding: 5px;
+  color: #252525;
+  margin: 0;
+}
+
+/*CARD-PRICE*/
+.block .card .card-price {
+  width: 100%;
+  height: 7%;
+}
+.block .card .card-price h4 {
+  padding: 5px;
+  color: rgba(25,25,25,.7);
+  margin: 0;
+}
+.block .card .card-price h4 strong {
+  padding-left: 5px;
+  color: #252525;
+}
+
+/*CARD-SIZE*/
+.block .card .card-size {
+  width: 100%;
+  height: 7%;
+}
+.block .card .card-size h4 {
+  padding: 5px;
+  color: rgba(25,25,25,.7);
+  margin: 0;
+}
+.block .card .card-size h4 strong {
+  padding-left: 5px;
+  color: #252525;
+}

@@ -1,0 +1,53 @@
+<div class="header">
+  <div class="header-right">
+    <div class="login">
+      <h4  (click)="openMenuAuth()">{{lang.logInL}}</h4>
+      <div class="header__menu" *ngIf="isAuth">
+        <ul>
+          <li [routerLink]="['/login']" (click)="openMenuAuth()">{{lang.logInL}}</li>
+          <li [routerLink]="['/register']" (click)="openMenuAuth()">{{lang.registerL}}</li>
+          <li (click)="openMenuAuth(); checkOut()">{{lang.logOutL}}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="basket" (click)="openModal()"><img src="" [alt]=lang.basketL></div>
+    <div class="language" (click)="openMenuLanguage()">
+      <h4>{{nowLanguage}}</h4>
+      <div class="header__menu" *ngIf="isLanguage">
+        <ul *ngFor="let language of languages">
+          <li (click)="changeLanguage(language.value)">{{language.value}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<app-preloader></app-preloader>
+<app-message></app-message>
+<div class="row">
+  <div class="sidebar">
+    <div class="menu">
+      <ul class="menu-position" *ngFor="let category of categories">
+        <li class="position" [routerLink]="['/categories', category._id]">
+          <h3 class="p-title">
+            {{category.name}}
+          </h3>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<div class="footer">
+  <div class="contact">
+    <h5>{{lang.contactsL}}: <br> {{lang.phoneL}} +00 (000) 000 00 00
+    <a href="#"> пошта@gmai.com </a> </h5>
+  </div>
+  <div class="message">
+    <div class="telegram"><img src="" alt=""></div>
+    <div class="telegram"><img src="" alt=""></div>
+  </div>
+</div>
+<app-modal *ngIf="modal.isModal"></app-modal>
+

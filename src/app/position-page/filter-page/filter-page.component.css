@@ -1,0 +1,110 @@
+/*FILTER*/
+.filter-block {
+  padding-left: 20px;
+  display: inline-block;
+  width: 100%;
+  background-color: white;
+}
+.filter-block .filter {
+  display: inline-block;
+  background-color: coral;
+  margin-right: 20px;
+}
+
+/*FILTER-PRICE*/
+.filter-block .filter .price {
+  display: inline-block;
+  background-color: white;
+}
+.filter-block .filter .price input {
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
+  border-radius: 0;
+  outline: none;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  margin: 0 20px 8px 0;
+  padding: 0;
+  box-shadow: none;
+  box-sizing: content-box;
+}
+.filter-block .filter .price input:focus {
+  border-bottom: none;
+  box-shadow: 0 2px 0 0 #252525;
+}
+
+/*FILTER-SIZE*/
+.filter-block .filter .size {
+  display: inline-block;
+  background-color: white;
+}
+.filter-block .filter .size input {
+  text-align: center;
+  border: none;
+  border-bottom: 1px solid #9e9e9e;
+  border-radius: 0;
+  outline: none;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  margin: 0 0 8px 0;
+  padding: 0;
+  box-shadow: none;
+  box-sizing: content-box;
+}
+.filter-block .filter .size input:focus {
+  border-bottom: none;
+  box-shadow: 0 2px 0 0 #252525;
+}
+
+/*FILTER-SIZE-MENU*/
+.filter-block .filter .size .menu {
+  position: absolute;
+  cursor: pointer;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
+  0 3px 1px -2px rgba(0,0,0,0.12),
+  0 1px 5px 0 rgba(0,0,0,0.2);
+}
+
+.filter-block .filter .size .menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+}
+
+.filter-block .filter .size .menu ul li {
+  z-index: -1;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.filter-block .filter .size .menu ul li:hover {
+  box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),
+  0 2px 0 rgba(0,0,0,.1),
+  inset 0 0 20px rgba(0,0,0,.1);
+}
+
+/*FILTER-BUTTON*/
+.filter-block .filter button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  text-decoration: none;
+  color: #252525;
+  background-color: white;
+  text-align: center;
+  letter-spacing: .5px;
+  transition: background-color .2s ease-out;
+  cursor: pointer;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
+  0 3px 1px -2px rgba(0,0,0,0.12),
+  0 1px 5px 0 rgba(0,0,0,0.2);
+}
+.filter-block .filter button:hover {
+  box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),
+  0 2px 0 rgba(0,0,0,.1),
+  inset 0 0 20px rgba(0,0,0,.1);
+}

@@ -1,0 +1,18 @@
+<app-filter-page (ofFilter)="applyFilter($event)"></app-filter-page>
+<div class="block">
+  <div class="card" *ngFor="let position of positions">
+    <div class="card-photo">
+      <a [routerLink]="['/position', position._id]"><img src="{{position.imgMain}}" alt="hh"></a>
+    </div>
+    <div class="card-title">
+      <h4>{{position.name}}</h4>
+    </div>
+    <div class="card-price">
+      <h4>{{lang.priceL}}:<strong>{{position.price}} {{lang.currencyL}}</strong></h4>
+    </div>
+    <div class="card-size">
+      <h4>{{lang.sizeL}}:<strong>{{position.size}}</strong></h4>
+    </div>
+  </div>
+</div>
+

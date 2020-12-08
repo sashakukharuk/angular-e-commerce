@@ -1,0 +1,35 @@
+<div class="order-block">
+  <div class="order-form">
+    <div class="order-content">
+      <span class="order-title">{{lang.orderL}}</span>
+      <div class="input-field">
+        <div class="input-field" *ngFor="let field of fieldsProfile">
+          <app-form-control [validate]="validate" [item]="field" (changeForm)="onChange($event)"></app-form-control>
+        </div>
+      </div>
+    </div>
+    <div class="order-action">
+      <div class="order-btn-left">
+        <button class="order-btn" [routerLink]="positionId ? ['/position', positionId] : ['/categories']">{{lang.cancelL}}</button>
+      </div>
+      <div class="order-btn-right">
+        <button type="submit" class="order-btn" [disabled]="isBtn" (click)="onSubmit()">{{lang.confirmL}}</button>
+      </div>
+    </div>
+  </div>
+  <div class="order-block-card">
+    <div class="order-card" *ngFor="let order of orders">
+      <div class="order-card-flex">
+        <div class="order-photo">
+          <img src="{{order.image}}" alt="ff">
+        </div>
+        <div class="order-body">
+          <h4>{{order.name}}</h4>
+          <h4>{{lang.sizeL}}:<strong>{{order.size}}</strong></h4>
+          <h4>{{lang.quantityL}}:<strong>{{order.quantity}}</strong></h4>
+          <h4>{{lang.priceL}}:<strong>{{order.price}} {{lang.currencyL}}</strong></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

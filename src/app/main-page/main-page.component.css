@@ -1,0 +1,239 @@
+/*HEADER*/
+.header {
+  height: 80px;
+  width: 100%;
+  background-color: #252525;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
+  0 3px 1px -2px rgba(0,0,0,0.12),
+  0 1px 5px 0 rgba(0,0,0,0.2),
+  0 2px 0 rgba(0,0,0,.1),
+  inset 0 0 20px rgba(255,255,255,.1);
+}
+
+/*HEADER RIGHT*/
+.header .header-right {
+  text-align: right;
+  display: inline-block;
+  height: 80px;
+  width: 100%;
+}
+
+/*LOGIN*/
+.header .header-right .login {
+  display: inline-block;
+  text-align: center;
+  height: 100%;
+  width: 100px;
+}
+.header .header-right .login h4 {
+  cursor: pointer;
+  color: white;
+  padding: 0 10px;
+  top: 50%;
+  transform: translateY(50%);
+  background-color: #252525;
+}
+.header .header-right .login h4:hover {
+  color: gold;
+}
+.header__menu {
+  background-color: white;
+  position: absolute;
+  cursor: pointer;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
+  0 3px 1px -2px rgba(0,0,0,0.12),
+  0 1px 5px 0 rgba(0,0,0,0.2);
+}
+.header__menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  width: 100px;
+}
+.header__menu ul li {
+  text-transform: uppercase;
+  text-align: center;
+  padding: 5px 0;
+}
+.header__menu ul li:hover {
+  box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),
+  0 2px 0 rgba(0,0,0,.1),
+  inset 0 0 20px rgba(0,0,0,.1);
+}
+
+/*BASKET*/
+.header .header-right .basket {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  width: 100px;
+}
+.header .header-right .basket img {
+  color: white;
+  bottom: 50%;
+  transform: translateY(50%);
+  /*width: 30px;*/
+  /*height: 30px;*/
+}
+.header .header-right .basket img:hover {
+  color: gold;
+}
+
+/*LANGUAGE*/
+.header .header-right .language {
+  display: inline-block;
+  text-align: center;
+  height: 100%;
+  width: 100px;
+}
+.header .header-right .language h4 {
+  text-transform: uppercase;
+  cursor: pointer;
+  color: white;
+  padding: 0 10px;
+  top: 50%;
+  transform: translateY(50%);
+  background-color: #252525;
+}
+.header .header-right .language h4:hover {
+  color: gold;
+}
+
+/*PRELOADER*/
+/*.preloader {*/
+/*  margin: 5px 0;*/
+/*  width: 1%;*/
+/*  height: 5px;*/
+/*  background-color: #252525;*/
+/*}*/
+
+/*MAIN*/
+.row {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+/*SIDEBAR*/
+.sidebar {
+  padding: 100px 0;
+  display: inline-block;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+}
+.sidebar .menu {
+  position: relative;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  /*border: 1px solid rgba(0,0,0,0.14);*/
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
+  0 3px 1px -2px rgba(0,0,0,0.12),
+  0 1px 5px 0 rgba(0,0,0,0.2);
+}
+.sidebar .menu .menu-position {
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+.sidebar .menu .menu-position .position {
+  outline: none;
+  cursor: pointer;
+  padding: 20px;
+  list-style-type: none;
+}
+.sidebar .menu .menu-position .position:hover {
+  box-shadow:0 2px 2px 0 rgba(0,0,0,0.14),
+  inset 0 0 20px rgba(0,0,0,.1);
+}
+.sidebar .menu .menu-position .position .p-title {
+  margin: 0;
+}
+
+/*CONTENT*/
+.content {
+  width: 100%;
+  height: 100%;
+  min-height: 800px;
+  background-color: white;
+  padding: 0 10px;
+}
+
+/*FOOTER*/
+.footer {
+  position: relative;
+  bottom: 0;
+  display: flex;
+  width: 100%;
+  background-color: #252525;
+}
+
+/*CONTACT*/
+.footer .contact {
+  padding: 10px;
+  display: flex;
+  font-size: 20px;
+  text-align: left;
+  text-decoration: none;
+  color: #fff;
+  width: 100%;
+}
+.footer .contact h5 {
+  margin: 10px;
+}
+.footer .contact a {
+  margin-left: 10px;
+  color: #fff;
+}
+/*MASSAGE*/
+.footer .message {
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+.footer .message .telegram {
+  text-align: center;
+  width: 50%;
+  height: 100%;
+}
+/*.footer .message .telegram img {*/
+/*  width: 60px;*/
+/*  height: 60px;*/
+/*  transform: translateY(50%);*/
+/*}*/
+
+@media (max-width: 1160px) {
+  .row .order-block {
+    display: inline-block;
+  }
+  .row .content .overview-card {
+    display: inline-block;
+  }
+  .row .order-block .order-block-card {
+    padding-top: 20px;
+  }
+}
+
+@media (max-width: 930px) {
+  .row .content .overview-card {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 750px) {
+  .row {
+    display: inline-block;
+  }
+  .row .sidebar {
+    padding-bottom: 0;
+  }
+  .row .content {
+    text-align: center;
+  }
+  .row .order-block {
+    padding-left: 0;
+  }
+}

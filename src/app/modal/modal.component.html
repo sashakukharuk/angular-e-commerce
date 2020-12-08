@@ -1,0 +1,33 @@
+<div class="modalOverlay" *ngIf="modal">
+  <div class="modalWindow">
+    <div class="modal-content">
+      <h4 class="mb1">{{lang.goodsL}}</h4>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>{{lang.nameL}}</th>
+          <th>{{lang.quantityL}}</th>
+          <th>{{lang.priceL}}</th>
+          <th></th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let item of modal.addedOrders.orders">
+        <tr>
+          <td>{{item.name}}</td>
+          <td>{{item.quantity}}</td>
+          <td>{{item.price}} {{lang.currencyL}}</td>
+          <td><button class="deleteBtn" (click)="deletePosition(item._id)">{{lang.deleteL}}</button></td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="orderSummary">
+        <p>{{lang.totalPriceL}} <strong>{{modal.addedOrders.cost}}</strong></p>
+      </div>
+    </div>
+    <div class="modal-footer">
+      <button class="btnLeft" (click)="closeModal()">{{lang.cancelL}}</button>
+      <button class="btnRight" [disabled]="modal.addedOrders.orders.length === 0" [routerLink]="['/order']" (click)="closeModal()">{{lang.confirmL}}</button>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,31 @@
+<div class="filter-block">
+  <div class="filter">
+    <div class="price">
+      <h4>{{lang.priceL}}</h4>
+      <label for="from">
+        {{lang.fromL}}
+      </label>
+      <input id="from" type="number" name="from" min="1" maxlength="8" [(ngModel)]="from"/>
+      <label for="to">
+        {{lang.toL}}
+      </label>
+      <input id="to" type="number" name="to" min="1" maxlength="8" [(ngModel)]="to"/>
+    </div>
+  </div>
+  <div class="filter">
+    <div class="size">
+      <h4>{{lang.sizeL}}</h4>
+      <label>
+        <input type="text" name="size" [(ngModel)]="size" (click)="openAndCloseMenu()"/>
+      </label>
+      <div class="menu" *ngIf="isSize">
+        <ul *ngFor="let size of arraySize">
+          <li (click)="changeSize(size)">{{size.value}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="filter">
+    <button (click)="submitFilter()">{{lang.applyL}}</button>
+  </div>
+</div>

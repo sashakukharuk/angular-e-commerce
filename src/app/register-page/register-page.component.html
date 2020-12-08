@@ -1,0 +1,26 @@
+<div class="auth-block">
+  <div class="auth">
+    <div class="auth-content">
+      <span class="auth-title">{{lang.registerTitleL}}</span>
+      <div class="input-field" *ngFor="let field of fieldsAuth">
+        <app-form-control [validate]="validate" [item]="field" (changeForm)="onChange($event)"></app-form-control>
+      </div>
+      <h4>{{lang.repetitionPasswordL}}</h4>
+      <div class="input-field">
+        <label>
+          <input [disabled]="!authState.password" type="password" #actualPassword (focusout)="onFocus()">
+        </label>
+        <span class="warning" *ngIf="isPassword">
+          {{lang.repetitionPasswordL}}
+        </span>
+      </div>
+        <span class="auth-title">{{lang.personalL}}</span>
+        <div class="input-field" *ngFor="let field of fieldsProfile">
+          <app-form-control [validate]="validate" [item]="field" (changeForm)="onChange($event)"></app-form-control>
+        </div>
+    </div>
+    <div class="auth-action">
+      <button class="btn" [disabled]="isBtn" (click)="onSubmit()">{{lang.registerBtnL}}</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,14 @@
+.message {
+  transform: translateX(50%);
+  right: 50%;
+  margin-right: 8px;
+  position: fixed;
+  padding: 15px;
+  background-color: #757575;
+  color: white;
+  z-index: 1;
+}
+.message h4 {
+  margin: 0;
+}
+

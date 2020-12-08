@@ -1,0 +1,12 @@
+.preloader {
+  margin: 5px 0;
+  height: 5px;
+  width: 100%;
+  background-color: white;
+}
+
+.preloader .block {
+  height: 100%;
+  width: 0;
+  background-color: #26a69a;
+}

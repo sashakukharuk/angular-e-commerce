@@ -1,0 +1,24 @@
+<div class="overview-card" *ngIf="position">
+  <div class="last-page">
+    <span [routerLink]="['/categories/', position.categoryId]"><</span>
+  </div>
+  <div class="photo">
+    <div class="photo-large"><img [src]="position.imgLarge" alt="hh"></div>
+    <div class="photo-small" *ngFor="let imgSmall of position.imgSmall" (click)="changePhoto(imgSmall.img)"><img src="{{imgSmall.img}}" alt="hh"></div>
+  </div>
+  <div class="info">
+    <div class="info-title"><h4>{{position.name}}</h4></div>
+    <div class="info-price"><h4>{{lang.priceL}}:<strong>{{position.price}}</strong></h4></div>
+    <div class="info-size"><h4>{{lang.sizeL}}:<strong>{{position.size}}</strong></h4></div>
+    <div class="info-quantity">
+      <label>
+        <input type="number" value="1" name="quantity" min="1" max="10" (change)="changeQuantity($event)"/>
+      </label>
+    </div>
+    <div class="info-buttons">
+      <button (click)="addOrderBasket(position)">{{lang.basketL}}</button>
+      <button [routerLink]="['/order', position._id]">{{lang.buyL}}</button>
+    </div>
+    <div class="info-description"><p>{{position.overview}}</p></div>
+  </div>
+</div>

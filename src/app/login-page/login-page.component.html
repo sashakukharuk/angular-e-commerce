@@ -1,0 +1,14 @@
+<div class="auth-block">
+  <div class="auth">
+    <div class="auth-content">
+      <span class="auth-title">{{lang.logInL}}</span>
+      <div class="input-field" *ngFor="let field of fieldArray">
+        <app-form-control [validate]="validate" [item]="field" (changeForm)="onChange($event)"></app-form-control>
+      </div>
+    </div>
+    <div class="auth-action">
+      <button class="btn" [disabled]="isBtn" (click)="onSubmit()">{{lang.logInL}}</button>
+    </div>
+  </div>
+</div>
+
